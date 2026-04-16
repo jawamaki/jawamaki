@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Artesanías</title>
+    <style>
+        /* Estilos Colores Tierra */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4efe9; /* Beige claro */
+            color: #4a3728; /* Marrón oscuro */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #8c5230; /* Terracota */
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Cuadrícula de 3 columnas */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #e0d7cd;
+        }
+
+        .card-info {
+            padding: 1.5rem;
+        }
+
+        .card-info h3 {
+            margin: 0 0 0.5rem 0;
+            color: #8c5230;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Botón de WhatsApp */
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Marca Artesanal</h1>
+        <p>Hecho a mano con amor y tradición</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <!-- Producto 1 -->
+            <div class="card">
+                <img src="producto1.jpg" alt="Nombre del Producto">
+                <div class="card-info">
+                    <h3>Vasija de Barro</h3>
+                    <span class="price">$25.00</span>
+                    <a href="https://wa.me" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="card">
+                <img src="producto2.jpg" alt="Nombre del Producto">
+                <div class="card-info">
+                    <h3>Tejido en Lana</h3>
+                    <span class="price">$40.00</span>
+                    <a href="https://wa.me" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card">
+                <img src="producto3.jpg" alt="Nombre del Producto">
+                <div class="card-info">
+                    <h3>Tallado en Madera</h3>
+                    <span class="price">$35.00</span>
+                    <a href="https://wa.me" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mi Marca Artesanal - Catálogo Digital</p>
+    </footer>
+
+</body>
+</html>
