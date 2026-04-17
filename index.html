@@ -1,177 +1,273 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Etiquetas para que Google te encuentre -->
-    <title>Jawamaki | Artesanías y Catálogo Online</title>
-    <meta name="description" content="Descubre el catálogo exclusivo de Jawamaki. Artesanías únicas hechas a mano con materiales de alta calidad. ¡Pide la tuya por WhatsApp!">
-    <meta name="keywords" content="Jawamaki, artesanías, hecho a mano, catálogo artesanal, productos únicos, peleteria, cuero, bisuteria, peru, perú, peletería. bisutería">
-    <link rel="canonical" href="https://jawamaki.github.io/jawamaki/">
-
-<!-- Etiquetas para que se vea bien al compartir el link en redes sociales -->
-    <meta property="og:title" content="Jawamaki - Artesanías Hechas a Mano">
-    <meta property="og:description" content="Explora nuestro catálogo de piezas únicas creadas con tradición.">
-    <meta property="og:image" content="logo_fondo web.png"> 
-    <meta property="og:url" content="https://jawamaki.github.io/jawamaki/">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo.png"><!-- Icono de la pestaña (Favicon) -->
-    <link rel="apple-touch-icon" href="logo.png">
+    <title>Jawamaki | El Arte de las Manos Heredadas</title>
+    
+    <meta name="description" content="Artesanías únicas en piel, cuero, textil y bisutería. Tradición peruana hecha a mano.">
+    <meta property="og:title" content="Jawamaki - Artesanías con Legado">
+    <meta property="og:image" content="logo_fondo web.png"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        /* Estilos Colores Tierra */
+        :root {
+            --color-oro: #c5a059;
+            --color-cuero: #4a3728;
+            --color-crema: #f4efe9;
+            --color-accent: #8c5230;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4efe9; /* Beige claro */
-            color: #4a3728; /* Marrón oscuro */
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-crema);
+            color: var(--color-cuero);
             margin: 0;
             padding: 0;
         }
 
-        header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./logo_fondo web.png");
-    background-size: cover;
-    background-position: center;
-    color: #8c5230;
-    text-align: center;
-    padding: 12rem 1rem;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;    /* Coloca el título sobre el subtítulo */
-    justify-content: flex-end; /* Empuja TODO el texto hacia el borde inferior */
-    align-items: center; 
-    padding-bottom: 8px;      /* Cambia este número para subir o bajar el texto un poco más */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-                }
-       header h1 {
-    font-size: 1.5rem;    /* Un poco más grande pero no tosco */
-    letter-spacing: 3px;  /* Esto separa las letras como en la foto */
-    font-weight: 200;     /* Hace la letra más delgada y elegante */
-    color: #081ea8;
-    -webkit-text-stroke: 0.5px black; /* Grosor de 1px y color negro */
-    text-shadow: none; /* Quitamos la sombra difuminada para que el borde se vea nítido */
-    margin-bottom: 5px;
-}
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        /* Menú de Navegación Estilo Lujo */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            background: rgba(42, 31, 22, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        /* Cuadrícula de 3 columnas */
+        nav a {
+            color: #d4c4b5;
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--color-oro);
+        }
+
+        /* Header con tu imagen de fondo */
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("./logo_fondo web.png");
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 8px;
+            color: var(--color-crema);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            color: var(--color-oro);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--color-oro);
+            margin: 10px auto;
+        }
+
+        /* Cuadrícula de Productos */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
             background: white;
-            border-radius: 4px;
+            border-radius: 2px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: center;
-    border: 1px solid #e0d7cd; /* Este borde color crema es el secreto */
-}
-
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.4s ease;
+            border: 1px solid #e0d7cd;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .card img {
             width: 100%;
-            height: 250px;
+            height: 350px;
             object-fit: cover;
-            background-color: #e0d7cd;
         }
 
         .card-info {
-            padding: 1.5rem;
+            padding: 2rem;
+            text-align: center;
         }
 
         .card-info h3 {
-            margin: 0 0 0.5rem 0;
-            color: #8c5230;
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin: 0;
+            color: var(--color-cuero);
         }
 
         .price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
             display: block;
+            margin: 1rem 0;
+            font-size: 1.3rem;
+            color: var(--color-accent);
+            font-weight: 600;
         }
 
-        /* Botón de WhatsApp */
+        /* Botón de WhatsApp Estilo Cuero */
         .btn-whatsapp {
             display: inline-block;
-            background-color: #8c5230;
+            background-color: var(--color-cuero);
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 0px;
-            font-weight: bold;
-            transition: background 0.3s;    
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid var(--color-oro);
+            transition: all 0.3s;
         }
 
         .btn-whatsapp:hover {
-            background-color: #128c7e;
+            background-color: var(--color-oro);
+            color: var(--color-cuero);
+        }
+
+        /* Sección Quiénes Somos */
+        .about {
+            background: #ece4db;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-style: italic;
         }
 
         footer {
+            background: var(--color-cuero);
+            color: #d4c4b5;
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            padding: 3rem;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            nav { gap: 15px; }
+            nav a { font-size: 0.7rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-    <h1>BIENVENIDO A JAWAMAKI - EXPLORA NUESTRO LEGADO</h1>
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#productos">COLECCIÓN</a>
+        <a href="#nosotros">NUESTRO LEGADO</a>
+        <a href="#contacto">CONTACTO</a>
+    </nav>
+
+    <header id="inicio">
+        <h1>JAWAMAKI</h1>
+        <p>El arte de las manos heredadas</p>
     </header>
 
-    <div class="container">
+    <div class="container" id="productos">
+        <h2>PIEZAS EXCLUSIVAS</h2>
         <div class="grid">
             
-            <!-- Producto 1 -->
             <div class="card">
-                <img src="producto1.jpg" alt=" nombbre de la imagen ">
+                <img src="producto1.jpg" alt="Cartera de Cuero Artesanal">
                 <div class="card-info">
-                    <h3>Llama de alpaca</h3>
-                    <span class="price">$10</span>
-                    <a href="https://wa.me" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
+                    <h3>Peletería Fina</h3>
+                    <span class="price">S/ 180.00</span>
+                    <a href="https://wa.me/51999888777?text=Hola,%20me%20interesa%20la%20pieza%20de%20peletería" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Producto 2 -->
             <div class="card">
-                <img src="producto2.jpg" alt="Nombre del Producto">
+                <img src="producto2.jpg" alt="Manta de Alpaca">
                 <div class="card-info">
-                    <h3>Tejido en Lana</h3>
-                    <span class="price">$40.00</span>
-                    <a href="https://wa.me" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
+                    <h3>Línea Textil Alpaca</h3>
+                    <span class="price">S/ 250.00</span>
+                    <a href="https://wa.me/51999888777?text=Hola,%20me%20interesa%20la%20manta%20de%20alpaca" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Producto 3 -->
             <div class="card">
-                <img src="producto3.jpg" alt="Nombre del Producto">
+                <img src="producto3.jpg" alt="Bisutería en Piedras">
                 <div class="card-info">
-                    <h3>Tallado en Madera</h3>
-                    <span class="price">$35.00</span>
-                    <a href="https://wa.me" class="btn-whatsapp" target="_blank">Comprar por WhatsApp</a>
+                    <h3>Bisutería Ancestral</h3>
+                    <span class="price">S/ 95.00</span>
+                    <a href="https://wa.me/51999888777?text=Hola,%20me%20interesa%20la%20bisutería" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
                 </div>
             </div>
 
         </div>
     </div>
 
+    <section class="about" id="nosotros">
+        <h2>NUESTRA HISTORIA</h2>
+        <p>
+            En Jawamaki, cada trazo sobre el cuero, cada hilo en el telar y cada piedra engastada es un susurro de nuestros antepasados. 
+            No solo creamos objetos, preservamos la técnica de las "manos heredadas" para ofrecerte piezas únicas que llevan el alma del Perú en cada detalle.
+        </p>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Jawamaki_Perú - Catálogo Digital</p>
+        <p>DISEÑADO CON PASIÓN EN PERÚ</p>
+        <p>&copy; 2026 JAWAMAKI - TODOS LOS DERECHOS RESERVADOS</p>
     </footer>
 
 </body>
