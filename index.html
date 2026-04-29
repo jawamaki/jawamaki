@@ -14,7 +14,7 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta name="description" content=""Jawamaki: Casa artesanal en Huancayo. Piezas exclusivas en cuero, peletería de alpaca y bisutería ancestral, creadas con tradición y herencia familiar.">
+    <meta name="description" content="Jawamaki: Casa artesanal en Huancayo. Piezas exclusivas en cuero, peletería de alpaca y bisutería ancestral, creadas con tradición y herencia familiar.">
     <meta property="og:title" content="Jawamaki - Artesanías con Legado">
     <meta property="og:image" content="logo_fondo web.png"> 
     <meta property="og:url" content="https://jawamaki.github.io/jawamaki/">
@@ -23,6 +23,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        
+    /* Estilo para las miniaturas */
+    .thumb {
+        width: 60px; 
+        height: 60px; 
+        object-fit: cover; 
+        cursor: pointer; 
+        border: 2px solid #ddd; 
+        flex-shrink: 0;
+        border-radius: 4px;
+        transition: 0.2s;
+    }
+    .thumb:hover { 
+        border-color: #25d366; /* Color verde WhatsApp al pasar el mouse */
+    }
+
+    /* Contenedor de miniaturas con scroll oculto pero funcional */
+    .thumb-container {
+        display: flex; 
+        gap: 8px; 
+        padding: 10px; 
+        overflow-x: auto; 
+        background: #fff; 
+        border-bottom: 1px solid #eee;
+        scrollbar-width: thin; /* Para Firefox */
+    }
+    
+    /* Estilo de la barra de scroll para Chrome/Edge */
+    .thumb-container::-webkit-scrollbar { height: 4px; }
+    .thumb-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+        
         html {
          scroll-behavior: smooth;
          scroll-padding-top: 70px; /* Ajustado a la altura de tu menú */
@@ -244,80 +275,56 @@
     <div class="grid">
         
         <div class="card">
-            <div style="overflow: hidden;">
-                <img src="p1-frente.jpg" id="grande1" style="width: 100%; height: 350px; object-fit: cover;">
-            </div>
-            <div style="display: flex; justify-content: center; gap: 5px; padding: 10px; background: #fff; border-bottom: 1px solid #eee;">
-                <img src="p1-frente.jpg" onclick="document.getElementById('grande1').src='p1-frente.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="p1-lado.jpg" onclick="document.getElementById('grande1').src='p1-lado.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="p1-detalle.jpg" onclick="document.getElementById('grande1').src='p1-detalle.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-            </div>
-            <div class="card-info">
-                <h3>Morral de Cuero Tallado</h3>
-                <span class="price">S/ 00.00</span>
-                <p style="font-size: 0.85rem; color: #666; line-height: 1.4; margin-bottom: 1.5rem;">
-                    Pieza de cuero genuino grabada a mano con motivos tradicionales. Un accesorio robusto que destaca por su durabilidad y carácter único.
-                </p>
-                <a href="https://wa.me/51999888777?text=Hola, me interesa el Morral de Cuero" class="btn-whatsapp" target="_blank">Consultar</a>
-            </div>
+    <div style="overflow: hidden; background: #f9f9f9;">
+        <img src="llama.png" id="grande1" style="width: 100%; height: 350px; object-fit: cover;">
+    </div>
+
+    <div class="thumb-container">
+        <img src="llama.png" class="thumb" data-nombre="Llama Real" data-precio="S/ 45.00" onclick="cambiarBloque1(this)">
+        <img src="toro.png" class="thumb" data-nombre="Toro de Piel" data-precio="S/ 55.00" onclick="cambiarBloque1(this)">
+        <img src="leon.png" class="thumb" data-nombre="León Melenudo" data-precio="S/ 60.00" onclick="cambiarBloque1(this)">
+        <img src="carnero.png" class="thumb" data-nombre="Carnero de Ovino" data-precio="S/ 40.00" onclick="cambiarBloque1(this)">
+        <img src="conejo.png" class="thumb" data-nombre="Conejo de Alpaca" data-precio="S/ 38.00" onclick="cambiarBloque1(this)">
+        <img src="cuy.png" class="thumb" data-nombre="Cuy" data-precio="S/ 30.00" onclick="cambiarBloque1(this)">
         </div>
 
+    <div class="card-info" style="padding: 15px; text-align: left;">
+        <h3 id="titulo-dinamico" style="margin: 0;">Llama Real</h3>
+        <p id="precio-dinamico" style="color: #d32f2f; font-weight: bold; font-size: 1.2rem; margin: 5px 0;">S/ 45.00</p>
+        
+        <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">
+            Elaborado artesanalmente con pieles naturales seleccionadas.
+        </p>
+        
+        <a href="https://wa.me/51999888777" id="btn-whatsapp" class="btn-whatsapp" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+            Consultar disponibilidad
+        </a>
+    </div>
+</div>
         <div class="card">
-            <div style="overflow: hidden;">
-                <img src="peleteria1.jpg" id="grande2" style="width: 100%; height: 350px; object-fit: cover;">
-            </div>
-            <div style="display: flex; justify-content: center; gap: 5px; padding: 10px; background: #fff; border-bottom: 1px solid #eee;">
-                <img src="peleteria1.jpg" onclick="document.getElementById('grande2').src='peleteria1.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="peleteria2.jpg" onclick="document.getElementById('grande2').src='peleteria2.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="peleteria3.jpg" onclick="document.getElementById('grande2').src='peleteria3.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-            </div>
-            <div class="card-info">
-                <h3>Peluches de Alpaca Premium</h3>
-                <span class="price">S/ 150.00</span>
-                <p style="font-size: 0.85rem; color: #666; line-height: 1.4; margin-bottom: 1.5rem;">
-                    Elaborados con la fibra más fina de alpaca, proporcionando una suavidad excepcional y un confort térmico natural incomparable.
-                </p>
-                <a href="https://wa.me/51999888777?text=Hola, me interesa la Peletería" class="btn-whatsapp" target="_blank">Consultar</a>
-            </div>
-        </div>
+    <div style="overflow: hidden;">
+        <img src="peleteria1.jpg" id="grande2" style="width: 100%; height: 350px; object-fit: cover;">
+    </div>
+    
+    <div class="thumb-container">
+        <img src="peleteria1.jpg" class="thumb" data-nombre="Oso de Alpaca Premium" data-precio="S/ 150.00" onclick="cambiarBloque2(this)">
+        <img src="peleteria2.jpg" class="thumb" data-nombre="León de Colección" data-precio="S/ 180.00" onclick="cambiarBloque2(this)">
+        <img src="peleteria3.jpg" class="thumb" data-nombre="Pingüino de Fibra Fina" data-precio="S/ 130.00" onclick="cambiarBloque2(this)">
+    </div>
 
-        <div class="card">
-            <div style="overflow: hidden;">
-                <img src="textil1.jpg" id="grande3" style="width: 100%; height: 350px; object-fit: cover;">
-            </div>
-            <div style="display: flex; justify-content: center; gap: 5px; padding: 10px; background: #fff; border-bottom: 1px solid #eee;">
-                <img src="textil1.jpg" onclick="document.getElementById('grande3').src='textil1.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="textil2.jpg" onclick="document.getElementById('grande3').src='textil2.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="textil3.jpg" onclick="document.getElementById('grande3').src='textil3.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-            </div>
-            <div class="card-info">
-                <h3>Manta Tradicional Huancayo</h3>
-                <span class="price">S/ 280.00</span>
-                <p style="font-size: 0.85rem; color: #666; line-height: 1.4; margin-bottom: 1.5rem;">
-                    Tejido lineal con iconografías genuinas de nuestra región. Una mezcla de historia y modernidad para un acabado distinguido.
-                </p>
-                <a href="https://wa.me/51999888777?text=Hola, me interesa la Manta Tradicional" class="btn-whatsapp" target="_blank">Consultar</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div style="overflow: hidden;">
-                <img src="bisuteria1.jpg" id="grande4" style="width: 100%; height: 350px; object-fit: cover;">
-            </div>
-            <div style="display: flex; justify-content: center; gap: 5px; padding: 10px; background: #fff; border-bottom: 1px solid #eee;">
-                <img src="bisuteria1.jpg" onclick="document.getElementById('grande4').src='bisuteria1.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="bisuteria2.jpg" onclick="document.getElementById('grande4').src='bisuteria2.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-                <img src="bisuteria3.jpg" onclick="document.getElementById('grande4').src='bisuteria3.jpg'" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer; border: 1px solid #ddd;">
-            </div>
-            <div class="card-info">
-                <h3>Aretes en Piedra y Plata</h3>
-                <span class="price">S/ 85.00</span>
-                <p style="font-size: 0.85rem; color: #666; line-height: 1.4; margin-bottom: 1.5rem;">
-                    Accesorios creados artesanalmente con materiales naturales, ideales para quienes valoran la autenticidad en cada detalle.
-                </p>
-                <a href="https://wa.me/51999888777?text=Hola, me interesa la Bisutería" class="btn-whatsapp" target="_blank">Consultar</a>
-            </div>
-        </div>
+    <div class="card-info" style="padding: 15px; text-align: left;">
+        <h3 id="titulo2" style="margin: 0;">Oso de Alpaca Premium</h3>
+        <p id="precio2" style="color: #d32f2f; font-weight: bold; font-size: 1.2rem; margin: 5px 0;">S/ 150.00</p>
+        
+        <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">
+            Elaborado con la fibra más fina de alpaca, proporcionando una suavidad excepcional.
+        </p>
+        
+        <a href="#" id="ws-link2" class="btn-whatsapp" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+            Consultar disponibilidad
+        </a>
+    </div>
+</div>
 
     </div>
 </div>
@@ -371,5 +378,36 @@
         <p>&copy; 2026 JAWAMAKI - EL ARTE DE LAS MANOS HEREDADAS</p>
     </div>
     </footer>
+    <script>
+const TELEFONO = "51999888777"; // Tu número aquí
+
+// Función para controlar el primer bloque
+function cambiarBloque1(elemento) {
+    const nombre = elemento.getAttribute('data-nombre');
+    const precio = elemento.getAttribute('data-precio');
+    
+    document.getElementById('grande1').src = elemento.src;
+    document.getElementById('titulo1').innerText = nombre;
+    document.getElementById('precio1').innerText = precio;
+    
+    // Actualizar link de WhatsApp
+    const mensaje = `Hola, me interesa el producto: ${nombre} (${precio})`;
+    document.getElementById('ws-link1').href = `https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`;
+}
+
+// Función para controlar el segundo bloque
+function cambiarBloque2(elemento) {
+    const nombre = elemento.getAttribute('data-nombre');
+    const precio = elemento.getAttribute('data-precio');
+    
+    document.getElementById('grande2').src = elemento.src;
+    document.getElementById('titulo2').innerText = nombre;
+    document.getElementById('precio2').innerText = precio;
+    
+    // Actualizar link de WhatsApp
+    const mensaje = `Hola, me interesa el producto: ${nombre} (${precio})`;
+    document.getElementById('ws-link2').href = `https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`;
+}
+</script>
 </body>
 </html>
