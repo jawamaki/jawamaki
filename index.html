@@ -54,32 +54,38 @@
 }
         .container { 
     max-width: 1100px; 
-    margin: 5rem auto; 
-    padding: 3rem 2rem; /* Aumentamos el padding para que el color respire */
+    width: 90%;          /* Añadir esto: para que en celular deje un margen a los lados */
+    margin: 3rem auto; 
+    padding: 2rem 1rem;  /* Reducir un poco el padding para que quepa todo */
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    /* NUEVAS LÍNEAS PARA EL FONDO OSCURO */
-    background-color: #2a1f16; /* Un marrón oscuro elegante y profundo */
-    border-radius: 4px;        /* Un toque sutil en las esquinas */
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.2); /* Sombra interna para dar profundidad */
+    background-color: #2a1f16;
+    box-sizing: border-box; /* Fundamental: asegura que el padding no "infle" el ancho */
 }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4rem; }
-         
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem;           /* Reducimos el espacio entre fotos en celular */
+    width: 100%;
+    justify-content: center;
+}
         .card { 
             background-color: #f4efe9; 
     border: 1px solid var(--color-oro); /* El borde oro ahora resaltará más */
     box-shadow: 0 10px 25px rgba(74, 55, 40, 0.05); /* Sombra color cuero muy suave */
     transition: transform 0.4s ease;
+            width: 100%;         /* Que tome el ancho disponible del grid */
+    max-width: 400px;    /* Pero que no crezca más de esto para no perder la elegancia */
+    margin: 0 auto;
+    box-sizing: border-box;
         }
         .card:hover { transform: translateY(-5px); }
 
         /* VISOR ELEGANTE */
         .main-img-container { 
+            aspect-ratio: 1 / 1; /* Esto hace que la foto siempre sea un cuadrado perfecto */
+            background-color: #fff;
             width: 100%; 
-            height: 380px; 
-            background: #fff; 
+            height: auto; 
             padding: 15px; /* Crea un marco interno */
             box-sizing: border-box;
             display: flex;
@@ -161,6 +167,12 @@
         /* SECCIONES FINALES */
         .about { background-image: linear-gradient(rgba(244, 239, 233, 0.4), rgba(244, 239, 233, 0.6)), url('fondo_manos.png'); background-attachment: fixed; background-size: cover; padding: 10rem 2rem; }
         footer { background: var(--color-cuero); color: #d4c4b5; text-align: center; padding: 5rem 2rem; }
+        
+        @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    .container { width: 95%; padding: 1.5rem 0.5rem; }
+}
     </style>
 </head>
 <body>
