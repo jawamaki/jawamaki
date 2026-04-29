@@ -16,18 +16,15 @@
     <meta property="og:image:height" content="630">
     <meta name="description" content="Jawamaki: Casa artesanal en Huancayo. Piezas exclusivas en cuero, peletería de alpaca y bisutería ancestral, creadas con tradición y herencia familiar.">
     <meta property="og:title" content="Jawamaki - Artesanías con Legado">
-    <meta property="og:image" content="logo_fondo web.png"> 
     <meta property="og:url" content="https://jawamaki.github.io/jawamaki/">
     <meta property="og:type" content="website">
     <meta name="keywords" content="Jawamaki, artesanía peruana, cuero, peletería, bisutería, alpaca, hecho a mano, ovino, perú, pieles, piel, piedras, talabartería, grabado en cuero, engarsado, artesanal, herencia, tradición">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        /* ESTILOS ORIGINALES REFORZADOS */
-        html {
-         scroll-behavior: smooth;
-         scroll-padding-top: 70px;
-        }
+        /* BASE Y COLORES ORIGINALES */
+        html { scroll-behavior: smooth; scroll-padding-top: 70px; }
         :root {
             --color-oro: #c5a059;
             --color-cuero: #4a3728;
@@ -35,188 +32,115 @@
             --color-accent: #8c5230;
         }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--color-crema);
-            color: var(--color-cuero);
-            margin: 0;
-            padding: 0;
-        }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--color-crema); color: var(--color-cuero); margin: 0; padding: 0; }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            padding: 20px;
-            background: rgba(42, 31, 22, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: #d4c4b5;
-            text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-
+        /* NAVEGACIÓN Y HEADER */
+        nav { display: flex; justify-content: center; align-items: center; gap: 30px; padding: 20px; background: rgba(42, 31, 22, 0.95); position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #d4c4b5; text-decoration: none; font-size: 0.75rem; letter-spacing: 2px; transition: 0.3s; }
         nav a:hover { color: var(--color-oro); }
 
-        header {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("./logo_fondo web.png");
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
+        header { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("./logo_fondo web.png"); background-size: cover; background-position: center; height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
+        header h1 { font-family: 'Cinzel', serif; font-size: 3rem; letter-spacing: 8px; margin: 0; color: var(--color-crema); }
 
-        header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 8px;
-            color: var(--color-crema);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-top: 10px;
-            color: var(--color-oro);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-
-        h2 {
-            font-family: 'Cinzel', serif;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 2px;
-            background: var(--color-oro);
-            margin: 10px auto;
-        }
-
-        /* CUADRÍCULA Y CARDS MEJORADAS */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 2px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid #e0d7cd;
-        }
-
-        /* VISOR GRANDE */
-        .main-img-container {
-            width: 100%;
-            height: 450px; /* Tamaño grande restaurado */
-            overflow: hidden;
-            background: #f9f9f9;
-        }
-
-        .main-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s;
-        }
-
-        /* MINIATURAS */
-        .thumb-container {
-            display: flex; 
-            gap: 8px; 
-            padding: 10px; 
-            overflow-x: auto; 
-            background: #fff; 
-            border-bottom: 1px solid #eee;
-            scrollbar-width: thin;
-        }
+        /* SECCIÓN DE PRODUCTOS - ESTILO VITRINA FINA */
+        .container { max-width: 1100px; margin: 5rem auto; padding: 0 2rem; }
         
-        .thumb-container::-webkit-scrollbar { height: 4px; }
-        .thumb-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4rem; }
 
-        .thumb {
-            width: 70px; 
-            height: 70px; 
+        .card { 
+            background: white; 
+            border: 1px solid rgba(197, 160, 89, 0.3); /* Borde oro sutil */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+            transition: transform 0.4s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+
+        /* VISOR ELEGANTE */
+        .main-img-container { 
+            width: 100%; 
+            height: 380px; 
+            background: #fff; 
+            padding: 15px; /* Crea un marco interno */
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .main-img-container img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; /* Para que la pieza se vea completa y artesanal */
+            transition: opacity 0.4s ease;
+        }
+
+        /* MINIATURAS DELGADAS */
+        .thumb-container { 
+            display: flex; 
+            justify-content: center;
+            gap: 10px; 
+            padding: 15px; 
+            background: #fafafa;
+        }
+        .thumb { 
+            width: 50px; 
+            height: 50px; 
             object-fit: cover; 
             cursor: pointer; 
-            border: 2px solid #ddd; 
-            flex-shrink: 0;
-            border-radius: 4px;
-            transition: 0.2s;
-        }
-        .thumb:hover { border-color: #25d366; }
-        .thumb.active { border-color: var(--color-oro); }
-
-        .card-info { padding: 2rem; text-align: left; }
-        .card-info h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; margin: 0; color: var(--color-cuero); }
-        .price { display: block; margin: 1rem 0; font-size: 1.3rem; color: var(--color-accent); font-weight: 600; }
-        .desc-custom { font-size: 0.9rem; color: #666; margin-bottom: 15px; min-height: 40px; }
-
-        .btn-whatsapp {
-            display: block;
-            background: #25d366;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
+            border: 1px solid #ddd; 
+            filter: grayscale(40%);
             transition: 0.3s;
         }
-        .btn-whatsapp:hover { background: #128c7e; }
-
-        /* SECCIONES FINALES ORIGINALES */
-        .about {
-            background-image: linear-gradient(rgba(244, 239, 233, 0.4), rgba(244, 239, 233, 0.6)), url('fondo_manos.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 8rem 2rem;
+        .thumb:hover, .thumb.active { 
+            border-color: var(--color-oro); 
+            filter: grayscale(0%);
+            transform: scale(1.1);
         }
 
-        footer {
+        .card-info { padding: 2.5rem 2rem; text-align: center; }
+        .card-info h3 { 
+            font-family: 'Cinzel', serif; 
+            font-size: 1.2rem; 
+            margin: 0; 
+            letter-spacing: 2px;
+            color: var(--color-cuero);
+        }
+        .price { 
+            display: block; 
+            margin: 15px 0; 
+            font-size: 1.1rem; 
+            color: var(--color-accent); 
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .desc-custom { 
+            font-size: 0.85rem; 
+            color: #777; 
+            line-height: 1.8; 
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .btn-whatsapp { 
+            display: inline-block;
             background: var(--color-cuero);
-            color: #d4c4b5;
-            text-align: center;
-            padding: 4rem 2rem;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--color-oro);
+            transition: 0.4s;
+        }
+        .btn-whatsapp:hover { 
+            background: var(--color-oro); 
+            color: var(--color-cuero);
         }
 
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            .grid { grid-template-columns: 1fr; }
-            .main-img-container { height: 350px; }
-        }
+        /* SECCIONES FINALES */
+        .about { background-image: linear-gradient(rgba(244, 239, 233, 0.4), rgba(244, 239, 233, 0.6)), url('fondo_manos.png'); background-attachment: fixed; background-size: cover; padding: 10rem 2rem; }
+        footer { background: var(--color-cuero); color: #d4c4b5; text-align: center; padding: 5rem 2rem; }
     </style>
 </head>
 <body>
@@ -230,11 +154,11 @@
 
     <header id="inicio">
         <h1>JAWAMAKI</h1>
-        <p>Tradición y Calidad en cada detalle</p>
+        <p>Artesanía con Legado</p>
     </header>
 
     <div class="container" id="productos">
-        <h2>LA COLECCIÓN</h2>
+        <h2>COLECCIÓN SELECTA</h2>
         <div class="grid">
             
             <div class="card">
@@ -242,16 +166,15 @@
                     <img src="llama.png" id="visor1">
                 </div>
                 <div class="thumb-container">
-                    <img src="llama.png" class="thumb" data-n="Llama Real" data-p="S/ 45.00" data-d="Elaborado artesanalmente con pieles naturales seleccionadas." onclick="cambiar(1, this)">
-                    <img src="toro.png" class="thumb" data-n="Toro de Piel" data-p="S/ 55.00" data-d="Figura tradicional revestida en cuero legítimo de alta calidad." onclick="cambiar(1, this)">
-                    <img src="leon.png" class="thumb" data-n="León Melenudo" data-p="S/ 60.00" data-d="Peluche de fibra natural con melena suave y detallada." onclick="cambiar(1, this)">
-                    <img src="carnero.png" class="thumb" data-n="Carnero de Ovino" data-p="S/ 40.00" data-d="Suavidad natural procesada por manos huancaínas." onclick="cambiar(1, this)">
+                    <img src="llama.png" class="thumb" data-n="Llama Real" data-p="S/ 45.00" data-d="Pieza maestra en piel de alpaca, capturando la esencia de los Andes en cada fibra." onclick="cambiar(1, this)">
+                    <img src="toro.png" class="thumb" data-n="Toro de Piel" data-p="S/ 55.00" data-d="Tradición y fuerza representadas en cuero genuino grabado con técnicas ancestrales." onclick="cambiar(1, this)">
+                    <img src="leon.png" class="thumb" data-n="León Melenudo" data-p="S/ 60.00" data-d="La suavidad de la fibra natural se une a un diseño único y sofisticado." onclick="cambiar(1, this)">
                 </div>
                 <div class="card-info">
                     <h3 id="titulo1">Llama Real</h3>
                     <span class="price" id="precio1">S/ 45.00</span>
-                    <p class="desc-custom" id="desc1">Elaborado artesanalmente con pieles naturales seleccionadas.</p>
-                    <a href="#" id="link1" class="btn-whatsapp" target="_blank">Consultar disponibilidad</a>
+                    <p class="desc-custom" id="desc1">Pieza maestra en piel de alpaca, capturando la esencia de los Andes en cada fibra.</p>
+                    <a href="#" id="link1" class="btn-whatsapp" target="_blank">Consultar Pieza</a>
                 </div>
             </div>
 
@@ -260,15 +183,14 @@
                     <img src="peleteria1.jpg" id="visor2">
                 </div>
                 <div class="thumb-container">
-                    <img src="peleteria1.jpg" class="thumb" data-n="Oso de Alpaca Premium" data-p="S/ 150.00" data-d="Elaborado con la fibra más fina de alpaca, suavidad excepcional." onclick="cambiar(2, this)">
-                    <img src="peleteria2.jpg" class="thumb" data-n="León de Colección" data-p="S/ 180.00" data-d="Pieza maestra de peletería con acabados de lujo." onclick="cambiar(2, this)">
-                    <img src="peleteria3.jpg" class="thumb" data-n="Pingüino de Fibra" data-p="S/ 130.00" data-d="Miniatura de colección creada con técnicas ancestrales." onclick="cambiar(2, this)">
+                    <img src="peleteria1.jpg" class="thumb" data-n="Oso de Alpaca" data-p="S/ 150.00" data-d="Excelencia en peletería. Un ejemplar de suavidad suprema y acabado impecable." onclick="cambiar(2, this)">
+                    <img src="peleteria2.jpg" class="thumb" data-n="León de Colección" data-p="S/ 180.00" data-d="Edición de lujo procesada bajo los más altos estándares de la maestría huancaína." onclick="cambiar(2, this)">
                 </div>
                 <div class="card-info">
-                    <h3 id="titulo2">Oso de Alpaca Premium</h3>
+                    <h3 id="titulo2">Oso de Alpaca</h3>
                     <span class="price" id="precio2">S/ 150.00</span>
-                    <p class="desc-custom" id="desc2">Elaborado con la fibra más fina de alpaca, suavidad excepcional.</p>
-                    <a href="#" id="link2" class="btn-whatsapp" target="_blank">Consultar disponibilidad</a>
+                    <p class="desc-custom" id="desc2">Excelencia en peletería. Un ejemplar de suavidad suprema y acabado impecable.</p>
+                    <a href="#" id="link2" class="btn-whatsapp" target="_blank">Consultar Pieza</a>
                 </div>
             </div>
 
@@ -276,45 +198,41 @@
     </div>
 
     <section class="about" id="nosotros">
-        <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); padding: 3rem; border: 1px solid var(--color-oro);">
-            <h2 style="margin-top: 0;">NUESTRA HISTORIA</h2>
-            <p style="font-style: normal; line-height: 2; color: var(--color-cuero); font-weight: 500; font-size: 1.1rem; text-align: center;">
-                Soy un artesano de <strong>Huancayo</strong>, guardián de un legado familiar que transforma la materia prima en piezas con historia...
-                <br><br>
-                En <strong>Jawamaki</strong>, no compites con el tiempo, lo celebras.
+        <div style="max-width: 750px; margin: 0 auto; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 4rem; border: 1px solid var(--color-oro);">
+            <h2 style="margin-top: 0;">NUESTRO ORIGEN</h2>
+            <p style="line-height: 2.2; text-align: center; letter-spacing: 0.5px;">
+                Soy artesano de <strong>Huancayo</strong>, guardián de un legado que transforma la materia en tesoros. Cada pieza en Jawamaki celebra la paciencia y el respeto por el material noble.
             </p>
         </div>
     </section>
 
     <footer>
-        <div style="margin-bottom: 2.5rem;">
-            <h3 style="font-family: 'Cinzel', serif; color: var(--color-oro); letter-spacing: 4px; margin-bottom: 1.5rem;">SÍGUENOS</h3>
-            <div style="display: flex; justify-content: center; gap: 30px;">
-                <a href="https://facebook.com/JawamakiPeru" target="_blank" style="color: #d4c4b5; font-size: 1.8rem;"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://instagram.com/jawamaki.peru" target="_blank" style="color: #d4c4b5; font-size: 1.8rem;"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://tiktok.com/@jawamaki.peru" target="_blank" style="color: #d4c4b5; font-size: 1.8rem;"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
+        <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 30px;">
+            <a href="https://facebook.com/JawamakiPeru" target="_blank" style="color: #d4c4b5; font-size: 1.5rem;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/jawamaki.peru" target="_blank" style="color: #d4c4b5; font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@jawamaki.peru" target="_blank" style="color: #d4c4b5; font-size: 1.5rem;"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-        <p>HECHO A MANO EN HUANCAYO, PERÚ &copy; 2026 JAWAMAKI</p>
+        <p style="letter-spacing: 2px; font-size: 0.7rem;">JAWAMAKI &copy; 2026 - ARTE EN MANOS HEREDADAS</p>
     </footer>
 
     <script>
         const TEL = "51999888777"; 
 
         function cambiar(bloque, el) {
-            const n = el.getAttribute('data-n');
-            const p = el.getAttribute('data-p');
-            const d = el.getAttribute('data-d');
-
-            document.getElementById('visor' + bloque).src = el.src;
-            document.getElementById('titulo' + bloque).innerText = n;
-            document.getElementById('precio' + bloque).innerText = p;
-            document.getElementById('desc' + bloque).innerText = d;
-
-            const msg = `Hola Jawamaki, me interesa: ${n} (${p})`;
-            document.getElementById('link' + bloque).href = `https://wa.me/${TEL}?text=${encodeURIComponent(msg)}`;
+            const visor = document.getElementById('visor' + bloque);
+            visor.style.opacity = 0;
             
-            // Marcar activa
+            setTimeout(() => {
+                visor.src = el.src;
+                visor.style.opacity = 1;
+                document.getElementById('titulo' + bloque).innerText = el.getAttribute('data-n');
+                document.getElementById('precio' + bloque).innerText = el.getAttribute('data-p');
+                document.getElementById('desc' + bloque).innerText = el.getAttribute('data-d');
+
+                const msg = `Hola Jawamaki, deseo información sobre: ${el.getAttribute('data-n')} (${el.getAttribute('data-p')})`;
+                document.getElementById('link' + bloque).href = `https://wa.me/${TEL}?text=${encodeURIComponent(msg)}`;
+            }, 250);
+
             const thumbs = el.parentElement.querySelectorAll('.thumb');
             thumbs.forEach(t => t.classList.remove('active'));
             el.classList.add('active');
