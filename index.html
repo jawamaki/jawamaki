@@ -48,10 +48,10 @@
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4rem; }
          
         .card { 
-            background: white; 
-            border: 1px solid rgba(197, 160, 89, 0.3); /* Borde oro sutil */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
-            transition: transform 0.4s ease;
+            background-color: #f4efe9; 
+    border: 1px solid var(--color-oro); /* El borde oro ahora resaltará más */
+    box-shadow: 0 10px 25px rgba(74, 55, 40, 0.05); /* Sombra color cuero muy suave */
+    transition: transform 0.4s ease;
         }
         .card:hover { transform: translateY(-5px); }
 
@@ -166,14 +166,19 @@
                     <img src="llama.png" id="visor1">
                 </div>
                 <div class="thumb-container">
-                    <img src="llama.png" class="thumb" data-n="Llama Real" data-p="S/ 45.00" data-d="Pieza maestra en piel de alpaca, capturando la esencia de los Andes en cada fibra." onclick="cambiar(1, this)">
-                    <img src="toro.png" class="thumb" data-n="Toro de Piel" data-p="S/ 55.00" data-d="Tradición y fuerza representadas en cuero genuino grabado con técnicas ancestrales." onclick="cambiar(1, this)">
-                    <img src="leon.png" class="thumb" data-n="León Melenudo" data-p="S/ 60.00" data-d="La suavidad de la fibra natural se une a un diseño único y sofisticado." onclick="cambiar(1, this)">
+                    <img src="llama.png" class="thumb" data-n="Llama Real" data-p="S/ 20.00" data-d="Pieza artesanal unica, trabajada en piel de ovino y alpaca." onclick="cambiar(1, this)">
+                    <img src="toro.png" class="thumb" data-n="Toro de Piel" data-p="S/ 22.00" data-d="Obra maestra representativa del Valle." onclick="cambiar(1, this)">
+                    <img src="leon.png" class="thumb" data-n="León Melenudo" data-p="S/ 50.00" data-d="Peluche elaborado de piel de alpaca con procesos artesanales." onclick="cambiar(1, this)">
+                    <img src="cuy.png" class="thumb" data-n="Cuy de Alpaca" data-p="S/ 30.00" data-d="Obra" onclick="cambiar(1, this)">
+                    <img src="conejo.png" class="thumb" data-n="Conejo Peludo" data-p="S/ 25.00" data-d="Obra" onclick="cambiar(1, this)">
+                    <img src="carnero.png" class="thumb" data-n="Carnero de Ovino" data-p="S/ 30.00" data-d="Obra" onclick="cambiar(1, this)">
+                    <img src="perros.png" class="thumb" data-n="Perros Enanos" data-p="S/ 32.00" data-d="Obra" onclick="cambiar(1, this)">
+                    <img src="llamachuzca.png" class="thumb" data-n="Llama" data-p="S/ 38.00" data-d="Obra" onclick="cambiar(1, this)">
                 </div>
                 <div class="card-info">
                     <h3 id="titulo1">Llama Real</h3>
-                    <span class="price" id="precio1">S/ 45.00</span>
-                    <p class="desc-custom" id="desc1">Pieza maestra en piel de alpaca, capturando la esencia de los Andes en cada fibra.</p>
+                    <span class="price" id="precio1">S/ 20.00</span>
+                    <p class="desc-custom" id="desc1">Pieza artesanal unica, trabajada en piel de ovino y alpaca.</p>
                     <a href="#" id="link1" class="btn-whatsapp" target="_blank">Consultar Pieza</a>
                 </div>
             </div>
@@ -201,7 +206,10 @@
         <div style="max-width: 750px; margin: 0 auto; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 4rem; border: 1px solid var(--color-oro);">
             <h2 style="margin-top: 0;">NUESTRA HISTORIA</h2>
             <p style="line-height: 2.2; text-align: center; letter-spacing: 0.5px;">
-                Soy artesano de <strong>Huancayo</strong>, guardián de un legado que transforma la materia en tesoros. Cada pieza en Jawamaki celebra la paciencia y el respeto por el material noble.
+                Soy un artesano de <strong>Huancayo</strong>, guardián de un legado familiar que transforma la materia prima en piezas con historia. 
+Bajo las enseñanzas de mis padres y abuelos, mantengo vivo un proceso artesanal profundo y paciente: desde la selección del material hasta el último acabado hecho a mano. 
+<br><br>
+En <strong>Jawamaki</strong>, no compites con el tiempo, lo celebras. Cada creación es el resultado de un largo camino de transformación, convirtiendo elementos naturales en tesoros únicos que llevan consigo la herencia viva de mi tierra.
             </p>
         </div>
     </section>
@@ -212,7 +220,7 @@
             <a href="https://instagram.com/jawamaki.peru" target="_blank" style="color: #d4c4b5; font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://tiktok.com/@jawamaki.peru" target="_blank" style="color: #d4c4b5; font-size: 1.5rem;"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-        <p style="letter-spacing: 2px; font-size: 0.7rem;">JAWAMAKI &copy; 2026 - ARTE EN MANOS HEREDADAS</p>
+        <p style="letter-spacing: 2px; font-size: 0.7rem;">JAWAMAKI &copy; 2026 - EL ARTE EN MANOS HEREDADAS</p>
     </footer>
 
     <script>
