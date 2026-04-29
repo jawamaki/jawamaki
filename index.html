@@ -41,10 +41,30 @@
 
         header { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("./logo_fondo web.png"); background-size: cover; background-position: center; height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
         header h1 { font-family: 'Cinzel', serif; font-size: 3rem; letter-spacing: 8px; margin: 0; color: var(--color-crema); }
-        h2{ text-align: center; }
+        h2 {
+    color: var(--color-oro); /* O usa #c5a059 */
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    width: 100%;
+}
         /* SECCIÓN DE PRODUCTOS - ESTILO VITRINA FINA */
-        .container { max-width: 1100px; margin: 5rem auto; padding: 0 2rem; }
-        
+        #productos {
+    background-color: #2a1f16;
+    padding: 4rem 0;
+}
+        .container { 
+    max-width: 1100px; 
+    margin: 5rem auto; 
+    padding: 3rem 2rem; /* Aumentamos el padding para que el color respire */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* NUEVAS LÍNEAS PARA EL FONDO OSCURO */
+    background-color: #2a1f16; /* Un marrón oscuro elegante y profundo */
+    border-radius: 4px;        /* Un toque sutil en las esquinas */
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.2); /* Sombra interna para dar profundidad */
+}
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4rem; }
          
         .card { 
@@ -166,9 +186,9 @@
                     <img src="llama.png" id="visor1">
                 </div>
                 <div class="thumb-container">
-                    <img src="llama.png" class="thumb" data-n="Llama Real" data-p="S/ 20.00" data-d="Pieza artesanal unica, trabajada en piel de ovino y alpaca." onclick="cambiar(1, this)">
-                    <img src="toro.png" class="thumb" data-n="Toro de Piel" data-p="S/ 22.00" data-d="Obra maestra representativa del Valle." onclick="cambiar(1, this)">
-                    <img src="leon.png" class="thumb" data-n="León Melenudo" data-p="S/ 50.00" data-d="Peluche elaborado de piel de alpaca con procesos artesanales." onclick="cambiar(1, this)">
+                    <img src="llama.png" class="thumb" data-n="Llama Real" data-p="S/ 20.00" data-d="Obra" onclick="cambiar(1, this)">
+                    <img src="toro.png" class="thumb" data-n="Toro de Piel" data-p="S/ 22.00" data-d="Obra" onclick="cambiar(1, this)">
+                    <img src="leon.png" class="thumb" data-n="León Melenudo" data-p="S/ 50.00" data-d="Obra" onclick="cambiar(1, this)">
                     <img src="cuy.png" class="thumb" data-n="Cuy de Alpaca" data-p="S/ 30.00" data-d="Obra" onclick="cambiar(1, this)">
                     <img src="conejo.png" class="thumb" data-n="Conejo Peludo" data-p="S/ 25.00" data-d="Obra" onclick="cambiar(1, this)">
                     <img src="carnero.png" class="thumb" data-n="Carnero de Ovino" data-p="S/ 30.00" data-d="Obra" onclick="cambiar(1, this)">
